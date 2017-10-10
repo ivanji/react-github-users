@@ -1,0 +1,29 @@
+import React, { Component } from 'react';
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import logo from './logo.svg';
+import './App.css';
+
+import {
+    withGoogleMap,
+    GoogleMap,
+    Marker,
+} from "react-google-maps";
+
+const MapWithAMarker = withGoogleMap(props =>
+    <GoogleMap
+        defaultZoom={8}
+        defaultCenter={{ lat: -34.397, lng: 150.644 }}
+    >
+      <Marker
+          position={{ lat: -34.397, lng: 150.644 }}
+      />
+    </GoogleMap>
+);
+
+<MapWithAMarker
+    containerElement={<div style={{ height: `400px` }} />}
+    mapElement={<div style={{ height: `100%` }} />}
+/>
+
+
+export default MyMapComponent;
